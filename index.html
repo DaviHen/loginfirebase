@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Login</title>
+    </head>
+    <body>
+        <div class="formContainer">
+            <form method="post" id="formElement">
+                <h2 class="formTitle">Logar</h2>
+                <div class="emailWrapper">
+                    <label for="emailInput" class="formLabel">Email</label>
+                    <input 
+                    type="email" 
+                    name="emailInput" 
+                    id="emailInput"
+                    class="formInput" 
+                    required>
+                </div>
+                <div class="passwordWrapper">
+                    <label for="passwordInput" class="formLabel">Senha</label>
+                    <input 
+                    type="password" 
+                    name="passwordInput" 
+                    id="passwordInput" 
+                    class="formInput"
+                    minlength="8"
+                    required>
+                </div>
+                <div class="errorMessage">
+                    <p id="errorMessageP">Email ou senha incorreto.</p>
+                </div>
+                <div class="btnWrapper">
+                    <a href="pages/forgotpassword.html" id="forgotPasswordLink" class="Link">Esqueceu a senha?</a>
+
+                    <div>
+                        <button type="submit" id="loginBtn" class="RedBtn">Entrar</button>
+                        <button type="button" id="goToRegisterBtn" class="WhiteBtn">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script src="scripts/script.js"></script>
+        <script src="scripts/loading.js"></script>
+        <script src="scripts/goToPages.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyCq2QeYcWTm8nVh7yZEt_jEuZFL56Lye5c",
+                authDomain: "projeto-de-teste-e35d8.firebaseapp.com",
+                projectId: "projeto-de-teste-e35d8",
+                storageBucket: "projeto-de-teste-e35d8.appspot.com",
+                messagingSenderId: "164298549078",
+                appId: "1:164298549078:web:616f03026dd55c26c8d8f7"
+            };
+            firebase.initializeApp(firebaseConfig)
+        </script>
+    </body>
+</html>

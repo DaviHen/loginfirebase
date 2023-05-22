@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbf9ff;
+  font-family: "Roboto", sans-serif;
+}
+
+.formContainer {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+}
+.formContainer .formTitle {
+  font-weight: normal;
+  text-align: center;
+  margin: 10px 0;
+}
+
+#formElement {
+  width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 20px;
+}
+#formElement .formLabel {
+  display: block;
+  margin: 15px 0 5px;
+}
+#formElement .formInput {
+  width: 100%;
+  font-size: 20px;
+  padding: 8px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+#formElement .formInput:focus {
+  outline: none;
+}
+
+.btnWrapper {
+  margin-top: 10px;
+}
+.btnWrapper div {
+  display: flex;
+  gap: 10px;
+}
+.btnWrapper div button {
+  font-size: 20px;
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid #424c55;
+}
+.btnWrapper div .RedBtn {
+  background-color: #ff0022;
+  color: #fbf9ff;
+}
+.btnWrapper div .RedBtn:hover {
+  border: 1px solid #ff0022;
+  background-color: #fbf9ff;
+  color: #ff0022;
+  transition: 0.5s;
+}
+.btnWrapper div .WhiteBtn:hover {
+  color: #ff0022;
+  border: 1px solid #ff0022;
+  transition: 0.5s;
+}
+
+.Link {
+  text-decoration: none;
+  color: #000;
+  margin-left: 2px;
+}
+.Link:hover {
+  color: #ff0022;
+}
+
+.errorMessage {
+  height: 25px;
+}
+.errorMessage p {
+  margin: 10px 0 0 2px;
+  color: #ff0022;
+  cursor: default;
+  display: none;
+}
+
+.WarningMessage {
+  margin: 15px 0;
+  color: #646464;
+}
+
+#loaderContainer {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #ff0022 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
