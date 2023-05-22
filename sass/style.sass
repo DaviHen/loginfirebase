@@ -40,16 +40,17 @@ body
         outline: none
         border: none
         border-bottom: 1px solid black
+        background-color: $GhostWhite
 
         &:focus
             outline: none
 
 .btnWrapper
-    margin-top: 10px
 
     div
         display: flex
         gap: 10px
+        margin-top: 10px
 
         button
             font-size: 20px
@@ -82,7 +83,6 @@ body
 .Link
     text-decoration: none
     color: #000
-    margin-left: 2px
 
     &:hover
         color: $Red
@@ -99,8 +99,13 @@ body
 
 .WarningMessage
     margin: 15px 0
-    color: #646464
 
+    #MinPasswordNumber
+        color: #646464
+    
+    #PasswordsNotMatchingError
+        color: $Red
+        display: none
 
 
 

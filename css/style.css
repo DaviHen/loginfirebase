@@ -41,17 +41,16 @@ body {
   outline: none;
   border: none;
   border-bottom: 1px solid black;
+  background-color: #fbf9ff;
 }
 #formElement .formInput:focus {
   outline: none;
 }
 
-.btnWrapper {
-  margin-top: 10px;
-}
 .btnWrapper div {
   display: flex;
   gap: 10px;
+  margin-top: 10px;
 }
 .btnWrapper div button {
   font-size: 20px;
@@ -82,7 +81,6 @@ body {
 .Link {
   text-decoration: none;
   color: #000;
-  margin-left: 2px;
 }
 .Link:hover {
   color: #ff0022;
@@ -100,7 +98,13 @@ body {
 
 .WarningMessage {
   margin: 15px 0;
+}
+.WarningMessage #MinPasswordNumber {
   color: #646464;
+}
+.WarningMessage #PasswordsNotMatchingError {
+  color: #ff0022;
+  display: none;
 }
 
 #loaderContainer {

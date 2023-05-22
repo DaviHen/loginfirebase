@@ -4,27 +4,15 @@
     const formElement = document.getElementById("formElement");
     const loginBtn = document.getElementById("loginBtn");
     const errorMessage = document.getElementById("errorMessageP");
+    const goToRegisterBtn = document.getElementById("goToRegisterBtn");
+
 
     formElement.addEventListener("submit", (e) => { e.preventDefault() });
-
-    //forgotPassword
-    const recoverPasswordBtn = document.getElementById("recoverPassword");
-    const recoverPasswordInput = document.getElementById("recoverPasswordInput");
-    const emailNotFoundMessage = document.getElementById("emailNotFound");
-
+    goToRegisterBtn.addEventListener("click", goToRegisterPage);
     loginBtn.addEventListener("click", login)
-    recoverPasswordBtn.addEventListener("click", recoverPassword)
 
-
-    function recoverPassword(){
-        showLoading();
-
-        firebase.auth().sendPasswordResetEmail(recoverPasswordInput.value).then( () => {
-            hideLoading();
-            alert("Email enviado com sucesso")
-        }).catch(error => {
-            emailNotFoundMessage.style.display = "block"
-        });
+    function goToRegisterPage(){
+        window.location.href = "pages/register.html"
     }
 
     function login(){
@@ -41,4 +29,5 @@
             console.log("erro", error)
         } )
     }
+    
 })()
