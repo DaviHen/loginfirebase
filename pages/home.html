@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <title>Home</title>
     </head>
     <body>
-        <h1>HOME</h1>
+        <header class="navigationHeader">
+            <div class="navigationTab">
+                <h2>Home</h2>
+                <button id="logoutBtn">Sair</button>
+            </div>
+        </header>
+
+        <script src="../scripts/loading.js"></script>
+        <script src="../scripts/home.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+        <script src="../firebase-init.js"></script>
+        <script src="../auth-guard.js"></script>
     </body>
 </html>

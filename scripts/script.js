@@ -11,6 +11,15 @@
     goToRegisterBtn.addEventListener("click", goToRegisterPage);
     loginBtn.addEventListener("click", login)
 
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            window.location.href = "../pages/home.html"
+            var uid = user.uid;
+        } else {
+            console.log("Deslogado")
+        }
+    });
+
     function goToRegisterPage(){
         window.location.href = "pages/register.html"
     }

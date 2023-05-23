@@ -107,6 +107,29 @@ body {
   display: none;
 }
 
+.navigationTab {
+  background-color: #31afd4;
+  color: #fbf9ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.navigationTab h2 {
+  font-size: 20px;
+}
+.navigationTab #logoutBtn {
+  background: none;
+  color: #fbf9ff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.navigationTab #logoutBtn:hover {
+  color: #ff0022;
+  transition: 0.2s;
+}
+
 #loaderContainer {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
